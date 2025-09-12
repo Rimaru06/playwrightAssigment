@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Learn Java",
+    "author": "Mukesh",
+    "subject": "Java",
+    "price": "500"
+  },
+  {
+    "name": "Learn Selenium",
+    "author": "Amit",
+    "subject": "Selenium",
+    "price": "300"
+  },
+  {
+    "name": "Learn JS",
+    "author": "Animesh",
+    "subject": "Javascript",
+    "price": "300"
+  },
+  {
+    "name": "Master In Selenium",
+    "author": "Mukesh",
+    "subject": "Selenium",
+    "price": "3000"
+  },
+  {
+    "name": "Master In Java",
+    "author": "Amod",
+    "subject": "JAVA",
+    "price": "2000"
+  },
+  {
+    "name": "Master In JS",
+    "author": "Amit",
+    "subject": "Javascript",
+    "price": "1000"
+  }
+]

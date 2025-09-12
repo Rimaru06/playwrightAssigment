@@ -1,0 +1,17 @@
+[
+    {
+        "Name" : "shiva",
+        "Email" : "shiva@example.com",
+        "Phone" : "1234567890",
+        "Address" : "123 Main St, Cityville",
+        "Gender" : "male",
+        "Days" : ["Monday", "Wednesday", "Friday"],
+        "Country" : "india",
+        "Colors" : "red",
+        "SortedList" : "zebra",
+        "DatePicker1" : ["12", "31", "2023"],
+        "DatePicker2" : ["12", "31", "2023"],
+        "startDate" : ["12", "25", "2023"],
+        "endDate" : ["12", "31", "2023"]
+    }
+]
