@@ -4,6 +4,8 @@ import {type Page} from "@playwright/test";
 import BookTable from "./BookTable";
 import DynamicWebTable from "./DynamicWebTable";
 import PaginationTable from "./PaginationTable";
+import DownloadFile from "./downLoad";
+import SearchWiki from "./searchWiki";  
 export default class PosManager{
     readonly page: Page;
     readonly guiElement : GuiElement;
@@ -11,6 +13,8 @@ export default class PosManager{
     readonly bookTable: BookTable;
     readonly dynamicWebTable: DynamicWebTable;
     readonly paginationTable: PaginationTable;
+    readonly downloadFile : DownloadFile;
+    readonly searchWiki : SearchWiki;
     constructor(page: Page){
         this.page = page;
         this.guiElement = new GuiElement(page);
@@ -18,6 +22,8 @@ export default class PosManager{
         this.bookTable = new BookTable(page);
         this.dynamicWebTable = new DynamicWebTable(page);
         this.paginationTable = new PaginationTable(page);
+        this.downloadFile = new DownloadFile(page);
+        this.searchWiki = new SearchWiki(page);
     }
 
     getGuiElement(): GuiElement {
@@ -34,5 +40,11 @@ export default class PosManager{
     }
     getPaginationTable(): PaginationTable {
         return this.paginationTable;
+    }
+    getDownloadFile(): DownloadFile {
+        return this.downloadFile;
+    }
+    getSearchWiki(): SearchWiki {
+        return this.searchWiki;
     }
 }
