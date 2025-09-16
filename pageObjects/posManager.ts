@@ -1,10 +1,10 @@
-import GuiElement from "./GuiElement";
-import FileUploadWidget from "./FileUploadWidget";
+import GuiElement from "./guiElement";
+import FileUploadWidget from "./fileUploadWidget";
 import {type Page} from "@playwright/test";
-import BookTable from "./BookTable";
-import DynamicWebTable from "./DynamicWebTable";
-import PaginationTable from "./PaginationTable";
-import DownloadFile from "./downLoad";
+import BookTable from "./bookTable";
+import DynamicWebTable from "./dynamicWebTable";
+import PaginationTable from "./paginationTable";
+import DownloadFile from "./downloadFile";
 import SearchWiki from "./searchWiki";  
 export default class PosManager{
     readonly page: Page;

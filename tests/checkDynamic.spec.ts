@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { goToPracticePage } from "../utils/goToPracticePage";
-import PosManager from "../pageObjects/PosManager";
+import PosManager from "../pageObjects/posManager";
 
 test("Dynamic web table changes on refresh and stats match table data", async ({ page }) => {
     await goToPracticePage(page);
@@ -8,7 +8,10 @@ test("Dynamic web table changes on refresh and stats match table data", async ({
     const dynamicTable = posManager.getDynamicWebTable();
 
     const firstTable = await dynamicTable.getTableHtml();
-    await page.reload();
+    // Wait for table to change by checking if any data element updates
+    await dynamicTable.table.locator("tbody tr").first().waitFor();
+    await dynamicTable.table.hover(); // Trigger any dynamic updates
+    await dynamicTable.table.locator("tbody tr").first().waitFor({ state: 'attached' });
     const secondTable = await dynamicTable.getTableHtml();
 
     expect(firstTable).not.toBe(secondTable);

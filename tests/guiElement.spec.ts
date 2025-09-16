@@ -1,4 +1,4 @@
-import PosManager from "../pageObjects/PosManager";
+import PosManager from "../pageObjects/posManager";
 import { test, expect } from "@playwright/test";
 import data from "../utils/guiElementTestdata.json";
 import { goToPracticePage } from "../utils/goToPracticePage";

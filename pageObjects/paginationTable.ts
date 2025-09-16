@@ -15,7 +15,7 @@ export default class PaginationTable {
         const pageCount = await this.pagination.count();
         for (let i = 0; i < pageCount; i++) {
             await this.pagination.nth(i).click();
-            await this.page.waitForTimeout(200);
+            await this.table.locator("tbody tr").first().waitFor();
             const row = this.table.locator("tbody tr", { hasText: productName });
             if (await row.count() > 0) {
     

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { goToPracticePage } from "../utils/goToPracticePage";
-import PosManager from "../pageObjects/PosManager";
+import PosManager from "../pageObjects/posManager";
 import products from "../utils/product.json";
 
 for (const product of products) {

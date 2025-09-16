@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { goToPracticePage } from "../utils/goToPracticePage";
 import bookData from "../utils/checktable.json";
-import PosManager from "../pageObjects/PosManager";
+import PosManager from "../pageObjects/posManager";
 
 for (const book of bookData) {
     test(`Check "${book.name}" book row exists`, async ({ page }) => {
